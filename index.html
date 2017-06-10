@@ -6,19 +6,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
 <body>
-    <h1>Start</h1>
-
-    <video id="video">
+    <video id="video" >
         This browser doesn't support video tag.
     </video>
 
-    <div class="container">
-
+    <div class="main-container">
+        <div class="form-group">
+            <label for="videoSize">Player size: </label>
+            <select id="videoSize" onclick="setVideoSize(value)">
+                <option value="240">Tiny (240p)</option>
+                <option value="480">Medium (480p)</option>
+                <option value="720" selected>Large (720p)</option>
+                <option value="1080">Huge (1080p)</option>
+            </select>
+        </div>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script src="index.js"></script>
 </html>
